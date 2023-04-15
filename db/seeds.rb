@@ -1,21 +1,17 @@
 puts "🌱 Seeding spices..."
 
 # Seed your database here
-User_Job.create([
+Application.create([
     {
-        job_id: 1,
         status: "applied"
     },
     {
-        job_id: 2,
         status: "applied"
     },
     {
-        job_id: 3,
         status: "applied"
     },
     {
-        job_id: 4,
         status: "applied"
     }
 ])
@@ -27,7 +23,8 @@ Job.create([
         job_type: "React Developer",
         job_description: "You'll build stuff",
         pay: 50,
-        location: "remote"
+        location: "remote",
+        application_id: 1
     },
     {
         position: "position data 2 ",
@@ -35,7 +32,8 @@ Job.create([
         job_type: "React Developer",
         job_description: "You'll build stuff",
         pay: 50,
-        location: "remote"
+        location: "remote",
+        application_id: 2
     },
     {
         position: "position data 3",
@@ -43,7 +41,8 @@ Job.create([
         job_type: "React Developer",
         job_description: "You'll build stuff",
         pay: 50,
-        location: "remote"
+        location: "remote",
+        application_id: 3
     },
     {
         position: "position data 4",
@@ -51,7 +50,8 @@ Job.create([
         job_type: "React Developer",
         job_description: "You'll build stuff",
         pay: 50,
-        location: "remote"
+        location: "remote",
+        application_id: 4
     }
 ])
 

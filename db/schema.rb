@@ -12,6 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2023_04_15_164406) do
 
+  create_table "applications", force: :cascade do |t|
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "jobs", force: :cascade do |t|
     t.string "position"
     t.string "company_name"
@@ -19,13 +25,7 @@ ActiveRecord::Schema.define(version: 2023_04_15_164406) do
     t.string "job_description"
     t.float "pay"
     t.string "location"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "user_jobs", force: :cascade do |t|
-    t.integer "job_id"
-    t.string "status"
+    t.integer "application_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

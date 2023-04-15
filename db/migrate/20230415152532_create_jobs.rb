@@ -7,6 +7,7 @@ class CreateJobs < ActiveRecord::Migration[6.1]
       t.string :job_description
       t.float :pay
       t.string :location
+      t.integer :application_id
       t.timestamps
     end
   end

@@ -1,58 +1,107 @@
 puts "🌱 Seeding spices..."
 
 # Seed your database here
-Application.create([
+
+Company.create([
     {
-        status: "applied"
+        company_name: "Microsoft"
     },
     {
-        status: "applied"
+        company_name: "Google"
     },
     {
-        status: "applied"
+        company_name: "Apple"
     },
-    {
-        status: "applied"
-    }
 ])
 
 Job.create([
     {
         position: "position data 1",
-        company_name: "pseudo company name",
-        job_type: "React Developer",
         job_description: "You'll build stuff",
         pay: 50,
         location: "remote",
-        application_id: 1
+        company_id: 1
     },
     {
-        position: "position data 2 ",
-        company_name: "pseudo company name",
-        job_type: "React Developer",
+        position: "position data 2",
         job_description: "You'll build stuff",
         pay: 50,
         location: "remote",
-        application_id: 2
+        company_id: 1
     },
     {
         position: "position data 3",
-        company_name: "pseudo company name",
-        job_type: "React Developer",
         job_description: "You'll build stuff",
         pay: 50,
         location: "remote",
-        application_id: 3
+        company_id: 1
     },
     {
         position: "position data 4",
-        company_name: "pseudo company name",
-        job_type: "React Developer",
         job_description: "You'll build stuff",
         pay: 50,
         location: "remote",
-        application_id: 4
+        company_id: 2
+    },
+    {
+        position: "position data 5",
+        job_description: "You'll build stuff",
+        pay: 50,
+        location: "remote",
+        company_id: 2
+    },
+    {
+        position: "position data 6",
+        job_description: "You'll build stuff",
+        pay: 50,
+        location: "remote",
+        company_id: 2
+    },
+    {
+        position: "position data 7",
+        job_description: "You'll build stuff",
+        pay: 50,
+        location: "remote",
+        company_id: 3
+    },
+    {
+        position: "position data 8",
+        job_description: "You'll build stuff",
+        pay: 50,
+        location: "remote",
+        company_id: 3
+    },
+    {
+        position: "position data 9",
+        job_description: "You'll build stuff",
+        pay: 50,
+        location: "remote",
+        company_id: 3
     }
-])
+    ])
+    
+    Applicant.create([
+        {
+            applicant_name: "pseudo name 1",
+            status: "applied",
+            job_id: 1,
+        },
+        {
+            applicant_name: "pseudo name 2",
+            status: "applied",
+            job_id: 1,
+        },
+        {
+            applicant_name: "pseudo name 3",
+            status: "applied",
+            job_id: 1,
+        },
+        {
+            applicant_name: "pseudo name 4",
+            status: "applied",
+            job_id: 1,
+        }
+    ])
+
 
 puts "✅ Done seeding!"

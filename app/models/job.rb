@@ -1,3 +1,4 @@
 class Job < ActiveRecord::Base
-    belongs_to :application
+    belongs_to :company
+    has_many :applicants
 end

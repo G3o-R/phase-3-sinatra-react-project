@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
     companies.to_json(include:{ jobs: {include: :applicants}})
   end
 
-  post "/company" do
+  post "/companies" do
     company = Company.create(
       company_name: params[:company_name],
     )

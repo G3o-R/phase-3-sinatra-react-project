@@ -51,5 +51,10 @@ class ApplicationController < Sinatra::Base
     applicant.destroy
   end
 #-----------------------------------------------------------------------------
+
+  get "/jobs" do
+    jobs = Job.all
+    jobs.to_json
+  end
 end
 

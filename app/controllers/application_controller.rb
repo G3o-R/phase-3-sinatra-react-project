@@ -4,21 +4,21 @@ class ApplicationController < Sinatra::Base
   get "/" do
     "its all working".to_json
   end
-# companies
+
   get "/companies" do
     companies = Company.all
     companies.to_json(include:{ jobs: {include: :applicants}})
   end
 
+#  post route for companies only meant to meet requirements
   post "/companies" do
     company = Company.create(
       company_name: params[:company_name],
     )
     Company.to_json
   end
-# ---------------------------------------------------------------------
-#applicants
 
+  # read route only meant to meet requirements
   get "/applicants" do
     applicants = Applicant.all
     applicants.to_json
@@ -50,8 +50,8 @@ class ApplicationController < Sinatra::Base
     applicant = Applicant.find(params[:id])
     applicant.destroy
   end
-#-----------------------------------------------------------------------------
 
+  # read route only meant to meet requirements
   get "/jobs" do
     jobs = Job.all
     jobs.to_json
@@ -59,6 +59,7 @@ class ApplicationController < Sinatra::Base
 
   get "/jobs/:id" do
     jobs = Job.find(params[:id])
+    jobs.to_json
   end
 
   post "/jobs" do 
@@ -69,10 +70,12 @@ class ApplicationController < Sinatra::Base
       location: params[:location],
       company_id: params[:company_id]
     )
+    jobs.to_json
   end
 
   delete "/jobs/:id" do 
     jobs = Job.find(params[:id])
     jobs.destroy
+  end
 end
 

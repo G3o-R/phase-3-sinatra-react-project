@@ -56,5 +56,19 @@ class ApplicationController < Sinatra::Base
     jobs = Job.all
     jobs.to_json
   end
+
+  get "/jobs/:id" do
+    jobs = =Job.find(params[:id])
+  end
+
+  post "/jobs" do 
+    jobs = Job.create(
+      position: params[:position],
+      job_description: params[:job_description],
+      pay: params[:pay],
+      location: params[:location],
+      company_id: params[:company_id]
+    )
+  end
 end
 

@@ -99,6 +99,13 @@ Job.create([
         location: "Anywhere there are are teachers",
         company_id: 3
     },
+    {
+        position: "Doctor exterminator",
+        job_description: "Fight off doctors using the power of apples",
+        pay: 80,
+        location: "Remote",
+        company_id: 3
+    },
     ])
     
     Applicant.create([

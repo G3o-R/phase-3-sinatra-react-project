@@ -58,7 +58,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/jobs/:id" do
-    jobs = =Job.find(params[:id])
+    jobs = Job.find(params[:id])
   end
 
   post "/jobs" do 
@@ -70,5 +70,9 @@ class ApplicationController < Sinatra::Base
       company_id: params[:company_id]
     )
   end
+
+  delete "/jobs/:id" do 
+    jobs = Job.find(params[:id])
+    jobs.destroy
 end
 

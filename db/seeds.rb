@@ -50,6 +50,55 @@ Job.create([
         location: "remote",
         company_id: 1
     },
+    {
+        position: "Senior Engineer",
+        job_description: "Utilize GO to provide efficent services for clients",
+        pay: 10,
+        location: "Mountain View, California",
+        company_id: 2
+    },
+    {
+        position: "IT Support",
+        job_description: "Provide excellent service and assistance for clients",
+        pay: 33,
+        location: "remote",
+        company_id: 2
+    },
+    {
+        position: "Snake Game Operator",
+        job_description: "Play the snake game and maintain it's quality",
+        pay: 40,
+        location: "Also The Moon",
+        company_id: 2
+    },
+    {
+        position: "Apple Eater",
+        job_description: "Eat Apples",
+        pay: 67,
+        location: "Oak Glen, CA",
+        company_id: 3
+    },
+    {
+        position: "Apple Philosopher",
+        job_description: "Ask questions like \"Who is Granny Smith?\"",
+        pay: 54,
+        location: "Yucaipa CA",
+        company_id: 3
+    },
+    {
+        position: "Apple Farmer",
+        job_description: "If your name is Johhny you're hired",
+        pay: 10000,
+        location: "Tehachapi, CA",
+        company_id: 3
+    },
+    {
+        position: "Apple Provider",
+        job_description: "Provide apples to teachers",
+        pay: 40,
+        location: "Anywhere there are are teachers",
+        company_id: 3
+    },
     ])
     
     Applicant.create([

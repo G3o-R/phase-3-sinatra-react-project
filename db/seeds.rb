@@ -105,7 +105,7 @@ Job.create([
         pay: 80,
         location: "Remote",
         company_id: 3
-    },
+    }
     ])
     
     Applicant.create([

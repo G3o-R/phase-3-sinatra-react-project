@@ -118,5 +118,11 @@ Job.create([
     
     end
 
+    Applicant.create(
+        applicant_name: "Johhny Apple Seed",
+        status: "applied",
+        job_id: 11
+    )
+
 
 puts "✅ Done seeding!"

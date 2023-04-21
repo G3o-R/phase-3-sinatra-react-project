@@ -107,29 +107,16 @@ Job.create([
         company_id: 3
     }
     ])
+
+    25.times do
+
+        Applicant.create(
+            applicant_name: Faker::Name.name,
+            status: "applied",
+            job_id: rand(0..13)
+        )
     
-    Applicant.create([
-        {
-            applicant_name: "pseudo name 1",
-            status: "applied",
-            job_id: 1,
-        },
-        {
-            applicant_name: "pseudo name 2",
-            status: "applied",
-            job_id: 1,
-        },
-        {
-            applicant_name: "pseudo name 3",
-            status: "applied",
-            job_id: 1,
-        },
-        {
-            applicant_name: "pseudo name 4",
-            status: "applied",
-            job_id: 1,
-        }
-    ])
+    end
 
 
 puts "✅ Done seeding!"

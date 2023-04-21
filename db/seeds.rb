@@ -85,20 +85,20 @@ Job.create([
         location: "Yucaipa CA",
         company_id: 3
     },
-    {
-        position: "Apple Farmer",
-        job_description: "If your name is Johhny you're hired",
-        pay: 10000,
-        location: "Tehachapi, CA",
-        company_id: 3
-    },
-    {
-        position: "Apple Provider",
-        job_description: "Provide apples to teachers",
-        pay: 40,
-        location: "Anywhere there are are teachers",
-        company_id: 3
-    },
+    # {
+    #     position: "Apple Farmer",
+    #     job_description: "If your name is Johhny you're hired",
+    #     pay: 10000,
+    #     location: "Tehachapi, CA",
+    #     company_id: 3
+    # },
+    # {
+    #     position: "Apple Provider",
+    #     job_description: "Provide apples to teachers",
+    #     pay: 40,
+    #     location: "Anywhere there are are teachers",
+    #     company_id: 3
+    # },
     {
         position: "Doctor exterminator",
         job_description: "Fight off doctors using the power of apples",
@@ -113,8 +113,9 @@ Job.create([
         Applicant.create(
             applicant_name: Faker::Name.name,
             status: "applied",
-            job_id: rand(0..13)
+            job_id: rand(0..Job.count)
         )
+        # binding.pry
     
     end
 

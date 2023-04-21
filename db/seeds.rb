@@ -80,7 +80,7 @@ Job.create([
     },
     {
         position: "Apple Philosopher",
-        job_description: "Ask questions like \"Who is Granny Smith?\"",
+        job_description: 'Ask questions like "Who is Granny Smith?"',
         pay: 54,
         location: "Yucaipa CA",
         company_id: 3

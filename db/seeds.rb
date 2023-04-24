@@ -5,12 +5,15 @@ puts "🌱 Seeding spices..."
 Company.create([
     {
         company_name: "Microsoft"
+        logo_url: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true"
     },
     {
         company_name: "Google"
+        logo_url: "https://1000logos.net/wp-content/uploads/2016/11/google-logo.jpg"
     },
     {
         company_name: "Apple"
+        logo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7uGeeOYocf0BTe2LDEwQ9Dkfbqo02wCqD-w&usqp=CAU"
     },
 ])
 
@@ -85,20 +88,20 @@ Job.create([
         location: "Yucaipa CA",
         company_id: 3
     },
-    # {
-    #     position: "Apple Farmer",
-    #     job_description: "If your name is Johhny you're hired",
-    #     pay: 10000,
-    #     location: "Tehachapi, CA",
-    #     company_id: 3
-    # },
-    # {
-    #     position: "Apple Provider",
-    #     job_description: "Provide apples to teachers",
-    #     pay: 40,
-    #     location: "Anywhere there are are teachers",
-    #     company_id: 3
-    # },
+    {
+        position: "Apple Farmer",
+        job_description: "If your name is Johhny you're hired",
+        pay: 10000,
+        location: "Tehachapi, CA",
+        company_id: 3
+    },
+    {
+        position: "Apple Provider",
+        job_description: "Provide apples to teachers",
+        pay: 40,
+        location: "Anywhere there are are teachers",
+        company_id: 3
+    },
     {
         position: "Doctor exterminator",
         job_description: "Fight off doctors using the power of apples",
@@ -115,7 +118,6 @@ Job.create([
             status: "applied",
             job_id: rand(0..Job.count)
         )
-        # binding.pry
     
     end
 

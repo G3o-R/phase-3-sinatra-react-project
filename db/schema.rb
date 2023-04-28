@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2023_04_24_151623) do
 
-  create_table "applicants", force: :cascade do |t|
-    t.string "applicant_name"
-    t.string "status"
-    t.integer "job_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "companies", force: :cascade do |t|
     t.string "company_name"
     t.datetime "created_at", precision: 6, null: false

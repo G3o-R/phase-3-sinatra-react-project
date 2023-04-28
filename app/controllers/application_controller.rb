@@ -7,7 +7,7 @@ class ApplicationController < Sinatra::Base
 
   get "/companies" do
     companies = Company.all
-    companies.to_json(include:{ jobs: {include: :applicants}})
+    companies.to_json(include: :jobs)
   end
 
 #  post route for companies only meant to meet requirements

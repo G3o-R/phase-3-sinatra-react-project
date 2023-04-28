@@ -4,15 +4,15 @@ puts "🌱 Seeding spices..."
 
 Company.create([
     {
-        company_name: "Microsoft"
+        company_name: "Microsoft",
         logo_url: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true"
     },
     {
-        company_name: "Google"
+        company_name: "Google",
         logo_url: "https://1000logos.net/wp-content/uploads/2016/11/google-logo.jpg"
     },
     {
-        company_name: "Apple"
+        company_name: "Apple",
         logo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7uGeeOYocf0BTe2LDEwQ9Dkfbqo02wCqD-w&usqp=CAU"
     },
 ])
@@ -110,22 +110,6 @@ Job.create([
         company_id: 3
     }
     ])
-
-    25.times do
-
-        Applicant.create(
-            applicant_name: Faker::Name.name,
-            status: "applied",
-            job_id: rand(0..Job.count)
-        )
-    
-    end
-
-    Applicant.create(
-        applicant_name: "Johhny Apple Seed",
-        status: "applied",
-        job_id: 11
-    )
 
 
 puts "✅ Done seeding!"

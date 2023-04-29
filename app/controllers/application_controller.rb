@@ -17,6 +17,10 @@ class ApplicationController < Sinatra::Base
     )
     Company.to_json
   end
+  delete "/companies/:id" do
+    company = Company.find(params[:id])
+    company.destroy
+  end
 
   # read route only meant to meet requirements
   get "/jobs" do

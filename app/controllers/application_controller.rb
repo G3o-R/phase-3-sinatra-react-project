@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/companies" do
-    companies = Company.all
+    companies = Company.all.order('company_name')
     companies.to_json(include: :jobs)
   end
 

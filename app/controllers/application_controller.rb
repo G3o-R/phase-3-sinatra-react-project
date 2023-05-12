@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
       company_name: params[:company_name],
       logo_url: params[:logo_url]
     )
-    Company.to_json
+    company.to_json
   end
   delete "/companies/:id" do
     company = Company.find(params[:id])

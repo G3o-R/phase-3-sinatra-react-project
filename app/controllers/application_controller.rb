@@ -14,6 +14,7 @@ class ApplicationController < Sinatra::Base
   post "/companies" do
     company = Company.create(
       company_name: params[:company_name],
+      logo_url: params[:logo_url]
     )
     Company.to_json
   end

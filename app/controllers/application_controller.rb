@@ -35,15 +35,15 @@ class ApplicationController < Sinatra::Base
   end
 
   patch 'jobs/:id' do
-    jobs = Job.find(params[:id])
-    jobs.update(
+    job = Job.find(params[:id])
+    job.update(
       position: params[:position],
       job_description: params[:job_description],
       pay: params[:pay],
-      :location params[:location],
-      :company_id params[:company_id],
+      location: params[:location],
+      company_id: params[:company_id]
     )
-    jobs.to_json
+    job.to_json
   end
 
   delete "/jobs/:id" do 

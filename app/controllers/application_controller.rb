@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
     jobs.to_json
   end
 
-  patch 'jobs/:id' do
+  patch '/jobs/:id' do
     job = Job.find(params[:id])
     job.update(
       position: params[:position],

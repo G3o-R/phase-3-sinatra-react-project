@@ -33,9 +33,17 @@ class ApplicationController < Sinatra::Base
     )
     jobs.to_json
   end
+  # Nancy said something regarding structuring my patch route like this I forgot
+  # why but why doesn't this work and does it matter?
 
-  patch '/jobs/:id' do
-    job = Job.find(params[:id])
+  get '/company/:companyId/jobs/:id' do
+    job = Company.find(params[:companyId]).jobs.find(params[:id])
+    # job = Job.find(params[:id])
+    job.to_json
+  end
+
+  patch '/company/:companyId/jobs/:id' do
+    job = Company.find(params[:companyId]).jobs.find(params[:id])
     job.update(
       position: params[:position],
       job_description: params[:job_description],
@@ -45,6 +53,7 @@ class ApplicationController < Sinatra::Base
     )
     job.to_json
   end
+
 
   delete "/jobs/:id" do 
     jobs = Job.find(params[:id])

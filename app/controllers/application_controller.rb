@@ -29,13 +29,14 @@ class ApplicationController < Sinatra::Base
       position: params[:position],
       job_description: params[:job_description],
       pay: params[:pay],
-      location: params[:location]
+      location: params[:location],
+      company_id: params[:company_id]
     )
     jobs.to_json
   end
 
-  patch '/company/:companyId/jobs/:id' do
-    job = Company.find(params[:companyId]).jobs.find(params[:id])
+  patch '/jobs/:id' do
+    job = Jobs.find(params[:id])
     job.update(
       position: params[:position],
       job_description: params[:job_description],

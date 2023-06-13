@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
 
   post "/companies" do
     company = Company.create(
-      company_name: params[:company_name],
+      company_name: params[:company_name],5
       logo_url: params[:logo_url]
     )
     company.to_json(include: :jobs)
@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/jobs/:id' do
-    job = Jobs.find(params[:id])
+    job = Job.find(params[:id])
     job.update(
       position: params[:position],
       job_description: params[:job_description],
